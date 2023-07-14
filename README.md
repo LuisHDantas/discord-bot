@@ -1,5 +1,5 @@
 # discord-bot
-A bot for the course SSC0902's (computer architecture and organization) discord server, that answers the most commun questions for the students.
+A bot for the course SSC0902's (computer architecture and organization) discord server, that answers the most common questions for the students, as well as supporting their study with exercises about every topic in the course.
 
 ## instalation
 
