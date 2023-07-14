@@ -10,8 +10,7 @@ import csv
  
 load_dotenv()
 
-DISCORD_TOKEN = "MTEyMzMyMTg3OTAzODUyNTU4MQ.GcDV8D.99SvGRzYGdGxyUEuANmK6PGKTdls_ihd0aCvcI"
-#os.getenv("DISCORD_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
