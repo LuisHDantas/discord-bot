@@ -33,7 +33,7 @@ A bot for the course SSC0902's (computer architecture and organization) discord 
 
 1. Acess the link
     
-    `https://discord.com/api/oauth2/authorize?client_id=1123321879038525581&permissions=1024&scope=bot`
+    `https://discord.com/api/oauth2/authorize?client_id=491404792778719242&permissions=8&scope=bot`
 
 2. In the open tab, select the server to add.
 
