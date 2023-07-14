@@ -5,7 +5,7 @@ A bot for the course SSC0902's (computer architecture and organization) discord 
 
 1. Clone the repository:
 
-    `git clone https://github.com/eduardafneumann/discord-bot.git`
+    `git clone https://github.com/LuisHDantas/discord-bot.git`
 
 2. Enter the sirectory:
 
