@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix=">>", intents=intents)
 
 df = pd.read_csv('in.csv', sep='|')
 
-dataBase = [(topics, question, answer) for topics, question, answer in zip(df.topics, df.questions, df.answers)]
+dataBase = [(topics, question, answers) for topics, question, answers in zip(df.topics, df.questions, df.answers)]
 
 
 topicsToString = [
@@ -70,7 +70,7 @@ async def perguntas(message):
 Use >>cancelar para sair!""",
 		title = f"Olá **{message.author.global_name}**! Qual tópico você quer estudar?"
 	)
-	embed.set_footer(text="Organização e Arquitetura de Computadores")
+	embed.set_footer(text="Organização e Arquitetura de Computadores\nCriado por Eduarda Neumann, Luís Henrique Dantas, João Gabriel Nazar")
 	await message.send(embed=embed)
 	#await Questions.TopicsMenu(message)
 	def check(m):
@@ -108,10 +108,13 @@ Use >>cancelar para sair!""",
 # Questões\n\n""")
   
 		for i, (question,answer) in enumerate(zip(questions,answers)):
-			await message.author.send(f"""### __**Questão {i+1}**__\n
-```{question}```
-Resposta:
-||```{answer}```||""")
+			embed = discord.Embed(
+				colour = discord.Colour.dark_teal(),
+				description = f"{question}\n\n *Gabarito:*\n ||```{answer}```||",
+				title = f"__**Questão {i+1}**__"
+			)
+			await message.send(embed=embed)
+      
 
 		await message.author.send("""## \n\nTem dúvidas? Entre em contato com um monitor ou com a professora Sarita!\n
 **Contatos:**

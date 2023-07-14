@@ -1,10 +1,696 @@
 topics|questions|answers
 Introducao|Qual a importância de se estudar Organização e Arquitetura?|Em resumo, o estudo da Organização e Arquitetura de Computadores é fundamental para entender o funcionamento dos sistemas computacionais, projetá-los de forma eficiente, desenvolver software otimizado e solucionar problemas relacionados ao desempenho e confiabilidade. É uma área essencial para profissionais da computação e contribui para o avanço contínuo da tecnologia.
 Introducao|Defina com suas próprias palavras o conceito de Programa Armazenado proposto por von Neumann.|O conceito de Programa Armazenado proposto por von Neumann refere-se à arquitetura de computadores em que as instruções e os dados são armazenados em uma mesma memória, permitindo que o computador execute sequencialmente um conjunto de instruções programadas, o que foi fundamental para o desenvolvimento dos computadores modernos.
-Introducao|Com suas próprias palavras, diferencie Organização de Arquitetura de Computadores.|A Organização de Computadores está relacionada ao modo como os componentes físicos do computador são organizados e interconectados, incluindo o design dos circuitos, a hierarquia de memória, o barramento de comunicação e a estrutura de armazenamento. Ela lida com aspectos de baixo nível, como a implementação do processador, a organização da memória e a arquitetura do sistema. Por outro lado, a Arquitetura de Computadores está mais focada nos aspectos conceituais e funcionais, envolvendo a definição da estrutura e do conjunto de instruções do processador, a interface com o software, a forma como as operações são realizadas e a eficiência do sistema. Enquanto a Organização de Computadores trata do hardware e dos detalhes de implementação, a Arquitetura de Computadores aborda a visão mais abstrata e funcional do sistema, proporcionando uma base para o desenvolvimento de software e a compreensão de como o computador opera.
-Introducao|Quais os principais componentes de um computador? E qual a função de cada um deles?|Um computador é composto por vários componentes essenciais que desempenham funções específicas. O processador (CPU) é o cérebro do computador, responsável por executar as instruções e realizar cálculos. A memória RAM fornece armazenamento temporário para dados e programas em execução, permitindo acesso rápido e eficiente. O disco rígido (HD) ou SSD armazena permanentemente dados e programas. A placa-mãe interliga todos os componentes e fornece conectividade. A placa de vídeo (GPU) processa e exibe imagens no monitor. A fonte de alimentação converte energia elétrica para alimentar o sistema. Os periféricos, como teclado, mouse e monitor, permitem a interação do usuário com o computador. Esses componentes trabalham em conjunto para executar tarefas, processar dados e fornecer uma experiência de computação completa.
-Introducao|Quais os principais componentes da CPU? E qual a função de cada um deles?|A CPU (Unidade Central de Processamento) é composta por vários componentes essenciais que desempenham funções específicas. O principal componente é o núcleo da CPU, responsável por executar as instruções e realizar cálculos. O cache é uma memória de alta velocidade usada para armazenar dados e instruções frequentemente acessados, reduzindo o tempo de acesso à memória principal. O registrador é uma memória interna que armazena temporariamente dados e instruções durante a execução. A Unidade de Controle coordena as operações da CPU, buscando instruções, decodificando-as e controlando a execução das operações. A Unidade Lógica e Aritmética (ULA) realiza operações matemáticas e lógicas, como adição, subtração e comparações. Esses componentes trabalham em conjunto para executar as instruções, processar dados e realizar as operações necessárias para o funcionamento do computador.
 Introducao|O que caracteriza uma arquitetura de propósito geral?|Uma arquitetura de propósito geral é aquela que foi projetada para atender a uma ampla variedade de aplicações e necessidades de computação. Ela é flexível e adaptável, permitindo a execução de uma ampla gama de tarefas e suportando diferentes tipos de software. Uma arquitetura de propósito geral é projetada com recursos e instruções abrangentes que podem ser aplicados em várias áreas, como processamento de texto, cálculos matemáticos, gráficos, redes e muito mais. Em contraste, uma arquitetura especializada é otimizada para um conjunto específico de tarefas ou aplicações, oferecendo desempenho superior em uma área específica, mas com limitações em outras áreas. A arquitetura de propósito geral é amplamente adotada em computadores pessoais, servidores, laptops e dispositivos móveis, pois oferece flexibilidade e versatilidade para atender às demandas de diferentes usuários e aplicações.
-Introducao|Defina com suas palavras qual a função dos sinais de controle.|"Os sinais de controle desempenham um papel crucial na arquitetura de um computador, sendo responsáveis por coordenar e controlar as operações dos diferentes componentes do sistema. Eles representam sinais elétricos ou lógicos que indicam instruções, comandos e condições específicas. Os sinais de controle são enviados pela Unidade de Controle da CPU e atuam como ""sinais de trânsito"" internos, direcionando o fluxo de dados e instruções entre a memória, a Unidade de Processamento e outros dispositivos. Eles sincronizam as operações do computador, determinando quando e como os dados são buscados, armazenados, processados e transferidos. Os sinais de controle também permitem o gerenciamento do fluxo de dados, o controle do temporizador, a seleção de dispositivos de entrada/saída, entre outras funções essenciais. Em resumo, os sinais de controle são responsáveis por orquestrar as operações e garantir o correto funcionamento do computador."
 Introducao|Como a Unidade de Controle comanda todos os componentes do computador?|A Unidade de Controle (UC) comanda todos os componentes do computador por meio da busca, decodificação e execução das instruções. Ela obtém a próxima instrução da memória, decodifica sua operação e gera os sinais de controle necessários para ativar os componentes relevantes. A UC controla o fluxo de dados entre os componentes, determina quais registradores receberão dados e quais serão escritos na memória. Além disso, ela monitora as condições de execução do programa e atualiza o contador de programa para direcionar o fluxo de execução. Em suma, a UC desempenha um papel crucial na coordenação e sincronização das operações do computador, garantindo o correto funcionamento do sistema.
 Introducao|Qual é a diferença entre memória RAM e memória ROM?|A memória RAM (Random Access Memory) é uma memória volátil e temporária utilizada para armazenar dados e instruções que são acessados pelo processador em tempo real. Ela permite a leitura e gravação de dados de forma rápida e aleatória, sendo essencial para a execução de programas e processos ativos. Por outro lado, a memória ROM (Read-Only Memory) é uma memória somente leitura que contém dados permanentes, como instruções de inicialização e firmware do sistema, que são necessários para o funcionamento básico do computador. A memória ROM mantém seus dados mesmo quando o computador é desligado ou reiniciado. Em resumo, a memória RAM é utilizada para armazenamento temporário de dados em tempo real, enquanto a memória ROM contém informações permanentes e não modificáveis.
+Introducao|Com suas próprias palavras, diferencie Organização de Arquitetura de Computadores.|Organização de computadores está muito mais relacionada com o funcionamento interno de uma CPU e como isso trabalha com a memória principal e com o sistema de entrada e saída para tornar possível a computação, enquanto que a arquitetura se refere ao modo com que esse sistema envolto da CPU está apresentada para o usuário, como um programador, por exemplo: quais são os recursos disponíveis, como os registradores interagem entre si e com outros componentes, entre outros.
+Introducao|Quais os principais componentes de um computador? Liste e detalhe a função deles.|As principais componentes de um computador são: a CPU, que por sua vez se encarrega de tarefas relacionadas às execuções e cálculos que um computador pode fazer; a memória principal que armazena de forma temporária dados que ficam registrados para cálculos pela CPU; e o sistema de entrada e saída que permite obter informações fornecidas por um usuário para que ela possa ser contada, armazenada, processada, mostrada, realizada. calculada e entre tantas outras coisas que um computador pode realizar.
+Introducao|Quais os principais componentes da CPU? Liste e detalhe a função deles.|"Os principais componentes de uma CPU são:
+UC: interpretar o código e gerar os sinais de controle que executarão a instrução requerida
+ULA: unidade lógica aritmética, que é responsável por realizar operações aritméticas entre dois registradores e também funções lógicas como OR, AND e XOR
+Registradores: armazenam um conjunto de bits. O funcionamento destes registradores estão sincronizados com um ciclo de clock. O registrador PC realiza o endereçamento da posição de memória que contém as instruções."
+Introducao|Defina o ciclo de instrução e suas fases.|"O ciclo de instrução é baseado no tempo de execução de um processador (sincronismo baseado em clocks). O ciclo possui duas fases, *fetch* (busca) e *execute* (execução). Na fase de busca, o endereço contido em PC é transferido para o MAR. É emitido um sinal de controle que faz com que o conteúdo do endereço que está no MAR seja gravado no MBR. Esse conteúdo (MBR) é então transferido para o IR, e o PC é incrementado.
+
+Na fase de execução, a UC interpreta a instrução contida em IR e emite os sinais de controle necessários para a finalização daquela instrução (seja ela de gravação/leitura na memória ou periféricos, operações lógicas/aritméticas, etc)."
+Introducao|Explique a função dos registradores PC, MAR, MBR e IR.|"•O registrador PC (Program Counter) armazena o endereço da próxima instrução a ser buscada na memória. Ele mantém o controle do fluxo de execução das instruções, apontando para a próxima instrução a ser executada.
+
+•O registrador MAR (Memory Address Register) é responsável por armazenar o endereço de memória de onde os dados devem ser lidos ou para onde devem ser escritos. Ele recebe o endereço da memória solicitado pelo processador.
+
+•O registrador MBR (Memory Buffer Register) tem a função de armazenar temporariamente os dados que estão sendo transferidos entre a memória e o processador. Ele atua como uma área de transferência para os dados em trânsito, permitindo que sejam lidos ou escritos em outros registradores ou na memória.
+
+•O registrador IR (Instruction Register) armazena a instrução atual que está sendo executada pelo processador. Ele recebe a instrução buscada da memória e a mantém disponível para decodificação e execução pelo processador."
+Assembly|"Codifique em Assembly RISC-V o bubble sort apresentado abaixo em pseudo-código:
+https://prnt.sc/26RtV8WiUQfm"|"	.data
+   	 .align 2
+array:   .word 9, 1, 4, 5, 8, 6, 1, 9
+    
+    	.text
+    	.align 2
+   	 .globl main
+
+main:    
+    	la s6, array   			 #s6 recebe o endereco do array    
+
+   	 addi, s0, zero, 8   		 #s0 = n (tamanho do array)
+   		 
+    
+    
+   	 addi, t1, s0, -1   		 #inicia j (t1) em n-1
+    
+    addi s1, zero, 1   		 # condicao de parada
+    
+    
+loop1:    blt t1, s1, lp_1   		 #compara j com condicao de parada e pula se for menor (fica se for maior ou igual)
+    
+   	 addi, t2, zero, 0   	 #inicia i em 0
+loop2:   	 bge t2, t1, lp_2   	 #compara i com j e pula se for maior ou igual (fica se for estritamente menor
+    
+   		 lw t3, 0(s6)   	 #pega vetor[n] e carrega em t3
+   		 lw t4, 4(s6)   	 #pega vetor[n+1] e carrega em t4
+   		 ble t3, t4, lp_3    #compara n com n+1 e fica se n>n+1
+   			 sw t4, 0(s6)    #se n>n+1, trocam de posicao
+   			 sw t3, 4(s6)
+lp_3:   		 addi t2, t2, 1   	 #incrementa i (t2)
+   		 addi s6, s6, 4   	 #incrementa s6
+   		 j loop2
+
+lp_2:   	 
+   	 la s6, array   		 #volta s6 para inicio do array
+   	 addi t1, t1, -1   		 # decrementa j (t1)
+   	 j loop1   			 
+lp_1:   		 
+    
+   	 
+   	 la s6, array   		 #volta s6 para o inicio do array
+imprimir:    ble s0, zero, end   	 #compara o tamanho com zero e para                                     # de imprimir quando acabar o vetor
+   	 
+   	 lw a0, 0(s6)   		 #carrega o valor apontado por s6
+   	 addi a7, zero, 1   	 	#carrega chamada de impressao de numero
+   	 ecall   			 #chamada ao sistema
+   	 addi s6, s6, 4   		 #incrementa s6
+   	 addi s0, s0, -1   		 #decrementa o tamanho
+   	 j imprimir   		 	#pula para o loop
+   	 
+   	 
+    
+    
+    
+end:   	 addi, a7, zero, 10
+   	 ecall"
+Assembly|" Codifique em Assembly RISC-V um programa que soma os valores de um vetor de inteiros de tamanho definido no
+próprio programa. Os dados do vetor também podem já estar definidos no código."|".data
+.align 2
+array: .word 1, 2, 3, 4, 5
+.text
+
+
+main:    
+
+    la s0, array
+
+   	 
+    lw t0, 0(s0)
+    
+    add s1, zero, t0
+    
+    addi s0, s0, 4
+
+loop:
+    lw t0, 0(s0)
+    beq t0, zero, fimLoop
+    
+    add s1, s1, t0 #s1 = total
+    addi s0, s0, 4 #s0 = array address
+    j loop
+    
+fimLoop:
+    addi a7, 1
+    addi a0, s1, zero
+    ecall
+    
+    addi a7, 10
+    ecall"
+Assembly|"Codifique em Assembly RISC-V um programa que lê uma string fornecida pelo usuário, inverte e imprime ela
+invertida."|".data
+string: .space 40
+stringRev: .space 40
+.align 2
+.text
+
+main:
+    li a7, 8
+    la a0, string
+    li a1, 40
+    ecall
+    
+    la s0, string
+    la s1, stringRev
+
+addToSP:
+    lb t0, 0(s0)
+    beqz t0, incrementOne
+    sb t0, 0(sp)
+    addi s0, s0, 1
+    addi sp, sp, -1
+    
+    j addToSP
+    
+incrementOne:
+    lb t1, 0(sp)
+    addi sp, sp, 1
+    
+reverseString:
+    lb t0, 0(sp)
+    beqz t0, endProgram
+    sb t0, 0(s1)
+    addi sp, sp, 1
+    addi s1, s1, 1
+    
+    j reverseString
+endProgram:
+    addi s1, s1, 1
+    sb t1, 0(s1)
+    
+    li a7, 4
+    la a0 stringRev
+    ecall
+    
+    li a7, 10
+    ecall"
+Assembly|Codifique em Assembly RISC-V um programa que implemente a funcionalidade da função strcat().|".data
+string: .space 40
+string2: .space 40
+output: .space 80
+.align 2
+.text
+
+main:
+    li a7, 8
+    la a0, string
+    li a1, 40
+    ecall
+    
+    la a0, string2
+    ecall
+    
+strcat:
+    la s0, string
+    la s1, string2
+    la s2, output
+    
+    j loopStr1
+    
+loopStr1:
+    lb t0, 0(s0)
+    beqz t0, decrementOne
+    sb t0, 0(s2)
+    addi s0, s0, 1                                                                                                                                    
+    addi s2, s2, 1
+    j loopStr1
+
+decrementOne:
+    addi s2, s2, -1
+    j loopStr2
+
+loopStr2:
+    lb t0, 0(s1)
+    beqz t0, printStrcat
+    sb t0, 0(s2)
+    addi s1, s1, 1
+    addi s2, s2, 1
+    j loopStr2
+    
+printStrcat:
+    li a7, 4
+    la a0, output
+    ecall
+    
+    li a7,10
+    ecall"
+Assembly|Codifique em Assembly RISC-V um programa que implemente a funcionalidade da função strcpy().Codifique em Assembly RISC-V um programa que implemente a funcionalidade da função strcpy().|".data 
+.align 0 
+string_input: .space 40 
+string_copy: .space 40 
+.text 
+.globl main 
+
+main: 	#Vamos ler a string digitada pelo usuário 	
+addi a7, x0, 8 	
+addi a1, x0, 40 	
+la a0, string_input 	
+ecall 	 	
+
+#s0 recebe a0 	
+la s0, string_input 	 	
+#Carregamos do label para s1 	
+la s1, string_copy 	 
+
+charloop: 	
+lb t0, 0(s0) 	
+beq t0, x0, sai_charloop 	
+sb t0, 0(s1) 	 	
+addi s0, s0, 1 	
+addi s1, s1, 1 	
+j charloop 	 
+
+sai_charloop: 	
+addi a7, x0, 4 	
+la a0, string_copy 	
+ecall 	 	
+
+addi a7, x0, 10 	
+ecall"
+Assembly|Codifique em Assembly RISC-V um programa que implemente a funcionalidade da função strcmp().|".data
+string1: .space 40
+string2: .space 40
+
+.align 2
+.text
+
+main:
+    li a7, 8
+   	 la a0, string1
+   	 li a1, 40
+   	 ecall
+    
+   	 li a7, 8
+   	 la a0, string2
+    li a1, 40
+   	 ecall
+
+str_cmp:
+    la s1, string1 #s1 tem o endereco do primeiro byte da string1
+   	 la s2, string2 #s2 tem o endereco do primeiro byte da string2
+   	 
+loop_str_cmp:
+    lb t1,0(s1)
+    lb t2,0(s2)
+    
+    beq t1,zero,str1_acabou #se str1 acabou, checa se str2 acabou tbm, dai sao iguais
+    beq t2,zero,str1_greater_than_str2 #se str2 acabou mas chegou nessa linha,
+   					# significa que s1 ainda nao acabou, printar 1
+    
+    blt t1,t2,str1_lower_than_str2 #if the first non-matching character
+   				 #in str1 is lower (in ASCII) than that of str2
+   				 
+    bgt t1,t2,str1_greater_than_str2 #if the first non-matching character
+   				 #in str1 is greater (in ASCII) than that of str2
+    
+    addi s1,s1,1 #avanca para o proximo char
+    addi s2,s2,1 #avanca para o proximo char
+    
+    j loop_str_cmp
+
+str1_acabou:
+    beq t2,zero,str1_equal_str2 #sao iguais, printar o valor 0
+    
+    j str1_lower_than_str2 #str2 ainda nao acabou, printar -1
+
+str1_equal_str2:
+    addi a7,zero,1
+    addi a0,zero,0
+    ecall
+    
+    j encerra
+
+str1_lower_than_str2:
+    addi a7,zero,1
+    addi a0,zero,-1
+    ecall
+    
+    j encerra    
+
+str1_greater_than_str2:
+    addi a7,zero,1
+    addi a0,zero,1
+    ecall
+
+encerra:
+    addi a7,zero,10
+    ecall"
+Assembly|O que são as instruções de desvio condicional na arquitetura RISC-V? Dê exemplos de instruções de desvio condicional e explique como elas são executadas.|"Na arquitetura RISC-V, as instruções de desvio condicional permitem que o fluxo de execução de um programa seja alterado com base em uma condição específica. Essas instruções verificam uma condição e, dependendo do resultado, desviam para um endereço de destino ou continuam a execução sequencialmente.
+
+Existem diferentes instruções de desvio condicional na arquitetura RISC-V, cada uma com sua própria condição de desvio. Alguns exemplos de instruções de desvio condicional são:
+
+•BEQ (Branch Equal): Desvia para o endereço de destino se dois registradores forem iguais.
+
+•BNE (Branch Not Equal): Desvia para o endereço de destino se dois registradores forem diferentes.
+
+•BLT (Branch Less Than): Desvia para o endereço de destino se o primeiro registrador for menor que o segundo registrador (considerando números com sinal).
+
+•BGE (Branch Greater or Equal): Desvia para o endereço de destino se o primeiro registrador for maior ou igual ao segundo registrador (considerando números com sinal).
+
+Para executar uma instrução de desvio condicional, o processador verifica a condição especificada pela instrução. Se a condição for atendida, o PC (Program Counter) é atualizado para o endereço de destino e a execução continua a partir desse ponto. Caso contrário, o PC é incrementado normalmente e a execução segue para a próxima instrução sequencialmente."
+Introducao|O que representa a expressão “computador de n bits”?|"A expressão ""computador de n bits"" refere-se a um computador ou sistema computacional que utiliza um formato específico para representar e manipular dados. Nesse contexto, ""n"" representa o número de bits disponíveis para armazenar informações digitais em cada palavra ou unidade de dados do computador."
+Assembly|"O que o trecho de código abaixo faz?
+
+li a0, 5
+li a1, 7
+
+add a2, a0, a1
+
+loop:
+sub a2, a2, 2
+blt a2, 1, end
+
+j loop
+
+end:
+"|Nesse código, os valores 5 e 7 são armazenados nos registradores a0 e a1, respectivamente. A soma dos dois números é realizada usando a instrução add e o resultado é armazenado no registrador a2. Em seguida, há um loop que subtrai 2 do valor em a2 repetidamente até que o valor de a2 seja menor que 1. O comando blt (branch if less than) verifica se a2 é menor que 1 e, caso seja verdadeiro, o programa sai do loop e continua para a próxima instrução após o loop.
+Monociclo|Quais são os tipos de instruções da arquitetura RISC-V, no conjunto de instruções RV32I?|"São 6 tipos de instrução: 
+•R (Register) ex: add
+•I (Immediate) ex: addi, lw
+•S (Store) ex: sw
+•B (Branch) ex: beq
+•U (Upper) ex: lui
+•J (Jump) ex: j, jal"
+Monociclo|Decodifique as seguintes instruções de máquina do RISC-V 0x00500893, 0x000e8533, 0x00afa023 (em hexadecimal) e determine o que elas fazem.|"Para decodificar essas instruções e determinar o que elas fazem, precisamos analisar o formato e os campos das instruções RISC-V.
+
+As instruções RISC-V têm 32 bits de comprimento e são divididas em campos específicos que indicam a operação e os operandos da instrução.
+
+0x00500893:
+
+Formato: I-Type (Immediate Type)
+Opcode: 0x13 (addi)
+rs1: 0x0 (registrador zero)
+rd: 0x1 (registrador t0)
+imm: 0x50 (80 em decimal)
+Essa instrução realiza a adição imediata. Ela adiciona o valor imediato 80 ao valor do registrador zero (que é sempre 0) e armazena o resultado no registrador t0.
+
+•0x000e8533:
+
+Formato: R-Type (Register Type)
+Opcode: 0x33 (add)
+rs1: 0x0 (registrador zero)
+rs2: 0xe (registrador a6)
+rd: 0x1 (registrador t0)
+Funct3: 0x0 (função de adição)
+Funct7: 0x0 (função de adição)
+Essa instrução realiza a adição de dois registradores. Ela adiciona o valor dos registradores zero (0) e a6 e armazena o resultado no registrador t0.
+
+•0x00afa023:
+
+Formato: R-Type (Register Type)
+Opcode: 0x33 (sub)
+rs1: 0xf (registrador a7)
+rs2: 0xa (registrador a5)
+rd: 0x1 (registrador t0)
+Funct3: 0x0 (função de subtração)
+Funct7: 0x0 (função de subtração)
+Essa instrução realiza a subtração de dois registradores. Ela subtrai o valor do registrador a5 do valor do registrador a7 e armazena o resultado no registrador t0.
+
+"
+Monociclo|"Converta de Assembly RISC-V para Binário ou de Binário para Assembly RISC-V, conforme o caso, as instruções
+solicitadas abaixo. Expresse as instruções binárias em hexadecimal, quando for o caso, na coluna mais à direita.
+Expresse as instruções em Assembly, quando for o caso, na coluna ""Instruções em Assembly"". A primeira coluna
+indica o endereço de memória (em decimal) que a instrução se encontra.
+https://prnt.sc/dfbscs137qo3"|"Tabela preenchida:
+https://prnt.sc/bFUwVZNeqmMi
+
+Obs 1: Da instrução 2 para a 3, avançou 16 bytes na memória, então o immediate é 16 que em binário é 10000, mas o bit menos significativo Imm[0] não precisa estar na instrução pois ele sempre será zero.
+Obs 2:As instruções de branch e jump podem ser vistas como 
+beq rs1, rs2, offset
+onde Branch Target = PC + offset"
+Monociclo|"Considere a seguinte ideia: modificar a arquitetura do conjunto de instruções e retirar a capacidade de especificar um deslocamento para instruções de acesso à memória. Especificamente, todas as instruções load-store com deslocamento diferente de zero devem tornar-se pseudo-instruções e devem ser implementadas por meio de duas instruções. Por exemplo:
+
+addi $at, $t1, 104 # some o deslocamento a um registrador temporário
+lw $t0, $at # nova forma de fazer lw $t0, 104($t1)
+
+Que mudanças devem ser feitas no caminho de dados monociclo e no controle para que essa arquitetura simplificada possa funcionar?"|"Caminho de dados:
+O caminho que liga a saída da ULA com o “end” na memória de dados pode ser removido, pois agora o cálculo do deslocamento vai ser armazenado em um registrador auxiliar $at e o endereço calculado só será utilizado na segunda pseudo-instrução.
+Para a segunda pseudo-instrução, deve haver uma ligação direta entre o “data rs1” do banco de registradores (contém o conteúdo de $at) e o “end” na memória de dados, ignorando a ULA, pois o cálculo do deslocamento já foi realizado na pseudo-instrução anterior. 
+
+Controle:
+Para a primeira pseudo-instrução, o valor do MemToReg (sinal de controle do último MUX) deve ser 0. Para a segunda pseudo-instrução, o valor do MemToReg deve ser 1."
+Monociclo|Implemente as alterações necessárias para que a CPU RISC-V Monociclo execute a instrução addi <rd>, <rs1>, valor_imediato. Para a sua implementação altere o que for necessário diretamente no caminho de dados monociclo e na tabela da UC vista em sala de aula. Caso você conclua que não precisam ser alterados, mostre porque definindo as conexões usadas para a execução da instrução.|A instrução addi é do Tipo I assim como a lw e o caminho de dados não precisa ser alterado, as alterações devem ser nos sinais de controle gerados pela UC. O sinal MemToReg é 1 na lw mas na addi será 0, assim a gente garante que o que será escrito no rd é o resultado da operação na ULA e não um conteúdo que esteja na memória. O sinal MemRead é 1 na lw mas na addi será 0.
+Monociclo|Implemente as alterações necessárias para que a CPU RISC-V Monociclo vista nas aulas execute também a instrução jal <rd>, offset (Jump and Link). Para a sua implementação altere o que for necessário diretamente no caminho de dados monociclo e na tabela da UC vista em sala de aula. Caso você conclua que não precisam ser alterados, mostre porque definindo as conexões usadas para a execução da instrução.|"Em verde, encontram-se as novidades do circuito:
+https://prnt.sc/1YK5lgYKfFxZ"
+Monociclo|Implemente as alterações necessárias para que a CPU RISC-V Monociclo vista nas aulas execute também a instrução blt <rs1>, <rs2>, valor_imediato (Branch if less than). Para a sua implementação altere o que for necessário diretamente no caminho de dados monociclo e na tabela da UC vista em sala de aula. Caso você conclua que não precisam ser alterados, mostre porque definindo as conexões usadas para a execução da instrução.|"A instrução blt pode ser vista como:
+	
+	blt rs1, rs2, offset
+	PC <-  rs1 < rs2 ?  PC + Imm : PC + 4
+	
+	Para isso precisamos de rs1 e rs2 na ULA e PC + Imm e PC + 4 chegando ao PC (com um mux para selecionar) 
+
+Caminho de dados:
+Se considerarmos mudanças implementadas na questão acima, o caminho de dados não precisaria mudar, pois rs1 e rs2 já chegam na ULA, e o valor de (PC + Imm) chega até o PC
+
+Controle:
+	A unidade de controle da ULA irá produzir um sinal de subtração quando a instrução é do tipo B.
+	O sinal de jump no mux entre (PC + 4) e (PC + Immediate) seria definido da seguinte forma: 
+	Se a instrução é blt (Inst[6..0] == blt.opcode), então verificamos o bit 31 do ALU output (bit de sinal, pois se o número for menor a saída é negativa). Caso a condição seja satisfeita, a saída para o sinal de jump é 1. Até o momento o sinal de controle de jump seria definido como:
+
+UC.jmp = ( inst[6..0] == jal.opcode || (inst[6..0] == blt.opcode && ALU.output[31] == ‘1’) )
+
+(note que a adição de blt, bgt, etc seriam triviais apenas adicionando mais or’s no sinal de controle)"
+Monociclo|"São consideradas instruções de memória:
+a) lw e sw
+b) add e sub
+c) or, and e slt
+d) beq e bgt"|"A alternativa correta é [a].
+
+As instruções ""lw"" (load word) e ""sw"" (store word) são consideradas instruções de memória na arquitetura RISC-V devido à sua funcionalidade específica relacionada à transferência de dados entre o processador e a memória de dados.
+"
+Monociclo|Cite as etapas de um ciclo de instrução na arquitetura RISC-V Monociclo.|"•Busca de Instrução (Instruction Fetch): Nessa etapa, a próxima instrução a ser executada é buscada na memória de instruções. O endereço da próxima instrução é obtido do registrador de programa (PC - Program Counter).
+
+•Decodificação de Instrução (Instruction Decode): Após a busca da instrução, ela é decodificada para determinar qual operação deve ser executada e quais operandos estão envolvidos. Os campos da instrução são interpretados para identificar o opcode e os registradores utilizados.
+
+•Execução (Execution): Nesta etapa, a operação da instrução é executada. Pode envolver operações aritméticas, lógicas, de desvio condicional, acesso à memória, entre outras. Os operandos necessários para a operação são buscados nos registradores ou na memória, conforme necessário.
+
+•Acesso à Memória (Memory Access): Se a instrução envolver acesso à memória, como leitura ou escrita, esta etapa será utilizada para realizar a transferência de dados entre o processador e a memória de dados.
+
+•Escrita de Resultado (Write-Back): Nesta etapa, o resultado da operação é armazenado no registrador de destino especificado na instrução. Se a instrução não produzir um resultado que precise ser armazenado em um registrador, essa etapa pode ser ignorada."
+Monociclo|Quais são as limitações da arquitetura RISC-V monociclo em termos de desempenho e eficiência?|A arquitetura RISC-V monociclo possui limitações em termos de desempenho e eficiência. Ela apresenta um ciclo de instrução fixo, o que resulta em desperdício de ciclos de clock e menos aproveitamento dos recursos do processador. Além disso, a falta de recursos avançados de otimização e a ausência de mecanismos de execução paralela limitam sua capacidade de processar instruções de forma eficiente. No entanto, é importante considerar que a arquitetura monociclo pode ser adequada para aplicações menos exigentes ou sistemas de menor complexidade, enquanto outras variantes da arquitetura RISC-V oferecem melhor desempenho e eficiência em cenários mais demandantes.
+Pipeline|Uma das características das arquiteturas RISC é que a maioria das instruções possuem tamanhos iguais. Quais as consequências e vantagens desta característica? Existe alguma desvantagem?|Uma das vantagens das arquiteturas RISC com instruções de tamanho igual é a simplicidade do projeto e da execução das instruções. Com instruções de tamanho fixo, o decodificador é mais simples e eficiente, resultando em implementações mais fáceis e rápidas. Além disso, a execução de instruções de tamanho igual facilita a implementação de pipelines, onde várias instruções podem ser executadas em paralelo. No entanto, uma desvantagem é que nem todas as instruções têm o mesmo nível de complexidade, o que pode resultar em uso ineficiente do espaço de memória de instruções e possivelmente afetar o desempenho em alguns casos. No geral, as vantagens superam as desvantagens, tornando a utilização de instruções de tamanho igual comum em arquiteturas RISC.
+Pipeline|Defina pipeline e sua importância no desempenho dos processadores.|"Pipeline é um tipo de implementação de arquitetura de processadores. A ideia central do pipeline é fazer com que as instruções sejam divididas em etapas e que essas etapas possam ocorrer de forma paralela dentro do processador, assim todas as componentes do processador estão ativas durante a execução de algum programa. O pipeline ideal divide a execução de uma instrução em etapas com tempo muito pequeno, porém ainda paralelizáveis (sem acessar a mesma componente de hardware), pois o ciclo de clock do pipeline é sempre o tempo da etapa mais longa.
+A única maneira realmente eficiente de implementar uma arquitetura de processador é usando pipeline, pois o aumento do número de instruções por segundo é muito relevante quando comparado aos outros tipos de arquitetura (mono e multi-ciclo), já que, uma vez que o pipeline enche, o tempo para uma instrução ser completada é igual ao tempo da maior etapa."
+Pipeline|"Os 5 estágios de dois processadores (a e b) têm as seguintes latências:
+https://prnt.sc/lXXhItK0_sWy
+Assuma que, na versão pipeline, cada estágio consome outros 20 ps com os registradores entre os estágios. Para as duas arquiteturas:
+
+a) Na versão não pipeline (monociclo), qual o tempo de ciclo? Qual a latência de uma instrução? Qual o throughput?
+b) Na versão pipeline, qual o tempo de ciclo? Qual a latência de uma instrução? Qual o throughput?
+c) Se um dos ciclos pudesse ser dividido ao meio, qual você escolheria? Qual o novo tempo de ciclo? Qual a nova latência? Qual o novo throughput?"|"a) 
+Para a monociclo o tempo de clock é a soma de todos os estágios, assim:
+	CLKa =( 300 + 400 + 250 + 500 + 100) ps = 1550 ps 
+CLKb =( 200 + 150 + 120 + 190 + 140) ps = 800 ps
+
+A latência é o tempo gasto para executar uma instrução. No monociclo, a latência é o próprio tempo de ciclo. Então temos:
+Latencia a = 1550 ps 
+Latencia b = 800 ps
+
+Throughput é o número de instruções executadas por segundo, então teremos:
+	Tha =(1/1550)*1012  instruções
+Thb =(1/800)*1012    instruções
+
+b)
+No pipeline, o tempo de ciclo é o tempo da etapa mais lenta somado ao tempo gasto nos registradores intermediários (nesse exercício: 20ps).
+A latência vai ser o tempo de ciclo * número de etapas.
+
+processador a:
+	etapa mais lenta é o memory: 500ps
+	tempo consumido nos regs intermediários: 20ps
+	tempo de ciclo de clock = 500 + 20 = 520ps
+	latencia = 5*520 = 2600ps
+	throughput = (1/520ps) = (1/520) * 1012 instruções
+
+processador b:
+	etapa mais lenta é o fetch: 200ps
+	tempo consumido nos regs intermediários: 20ps
+	tempo de ciclo de clock = 200 + 20 = 220ps
+	latencia = 5*220 = 1100ps
+	throughput = (1/220ps) = (1/220) * 1012 instruções
+
+c)
+Processador a:
+	Dividiria o memory em duas etapas de 250ps, a etapa mais lenta passaria a ser o decode de 400ps.
+	O novo tempo de ciclo passaria a ser 400 + 20 = 420ps
+	A latência seria 420 * 6 = 2520ps
+	O troughput passaria a ser 1/420ps = 1/420 * 10^12 instruções 
+
+Processador b:
+	Nem valeria a pena pq a próxima instrução mais lenta é de 190ps, que é quase a mesma coisa que os 200ps, iria ganhar muito pouco em troughput."
+Pipeline|"Considere um pipeline de 5 estágios (IF, ID, EX, MEM e WB). Assuma a seguinte distribuição de instruções que são executadas em um processador: 
+• 50% são aritméticas/lógicas
+• 25% são beq 
+• 15% são lw 
+• 10 são sw 
+Assumindo que o pipeline não vai parar por dependências (dados ou controle), qual a taxa de utilização da memória de dados? Qual a taxa de utilização da porta de escrita no banco de registradores?"|"50% tipo R/I/U excluindo loads -> acesso ao banco para leitura e escrita.
+25% tipo B -> acesso ao banco para leitura e alterar o valor do PC.
+15% lw -> acesso ao banco para leitura e escrita e à memória para leitura.
+10% sw -> acesso ao banco para leitura e à memória para escrita.
+
+Assim temos: Taxa de utilização da memória de dados = 25% (lw + sw) e
+Escrita no banco = 65% (aritméticas/lógicas + lw)"
+Pipeline|"Faça a simulação da execução da sequência de código abaixo em um pipeline de 5 estágios e mostre qual a situação final dos registradores do pipeline (IF/ID, ID/EX, EX/MEM e MEM/WB), considerando também os sinais de controle, ao final dos ciclos de clock 4 e 7. Considere que a primeira instrução está na posição 0 da memória e que o PC começa com 0. Considere também que t1 e t2 não possuem o mesmo conteúdo quando o código é executado. 
+beq t1, t2, 4 
+lw s0, 0(t0) 
+add s3, s1, s2 
+sw s4, 0(t0) 
+addi t1, t1, -4"|"Simulação:
+https://prnt.sc/P3zxNupJfk_3"
+Pipeline|"Considere o seguinte trecho de código 
+
+I0: div t2, t5, t8 
+I1: sub t9, t2, t7 
+I2: sll t5, a0, 2 
+I3: mul a1, t9, t5 
+I4: beq t2, a1,100 
+I5: or t8, t5, t2 
+
+a) Quais são as dependências de dados verdadeiras? E os hazards? Considere que o pipeline tem 5 estágios. 
+
+b) Assuma um pipeline MIPS de 5 estágios sem forwarding, e que cada estágio demora 1 ciclo. Ao invés de inserir operações nops, você deixa o processador parar quando se tem hazards. Quantos ciclos o processador para? Qual o tamanho de cada parada, em ciclos? Qual o tempo de execução (em ciclos) do programa inteiro? 
+
+c) Assuma um pipeline MIPS de 5 estágios com forwarding total. Escreva o programa com nops para eliminar os hazards."|"a)
+Dependências verdadeiras (RAW): 
+Linha 1: t2 na depende do resultado da linha 0. 
+Linha 3: t9 depende do resultado da linha 1 e t5 depende do resultado da linha 2.
+Linha 4: a1 depende do resultado da linha 3 e t2 depende do resultado da linha 0.
+Linha 5: t5 depende do resultado da linha 2 e t2 da linha 0.
+Hazards:
+	Todas as dependências acima são hazards exceto t2 na linha 4 e as dependências da linha 5, pois existem pelo menos duas instruções entre elas, assim o conteúdos dos registradores no banco já está correto.
+
+b)
+O programa terá 3 paradas de 2 ciclos cada, assim ele ficará parado por 6 ciclos, pois os hazards sempre ocorrem com instruções nas linhas anteriores (RAW com o rd da instrução imediatamente acima). Para executar n instruções o pipeline com k estágios leva (n + k-1) ciclos, se não houverem interrupções. Considerando que cada estágio leva um ciclo teríamos 10 ciclos, porém houveram 3 paradas de 2 ciclos cada, levando a um total de 16 ciclos para a execução completa do programa.
+
+c)
+Para pipeline com forwarding existem nop’s apenas quando há um RAW após uma lw, já que o resultado da lw só está disponível nos registradores MEM/WB, assim com forwarding não seria necessário adicionar nenhum nop, pois não existem instruções do tipo load."
+Pipeline|O que é o pipeline na arquitetura RISC-V e qual é o seu propósito?|Na arquitetura RISC-V, o pipeline é uma técnica de processamento que divide a execução de instruções em várias etapas sequenciais. O objetivo do pipeline é aumentar o desempenho e a eficiência do processador, permitindo a sobreposição das diferentes etapas do processamento de instruções. Cada estágio do pipeline é responsável por uma tarefa específica, como buscar a próxima instrução, decodificar a instrução, executar a operação, acessar a memória ou escrever o resultado de volta. Ao dividir o processamento em estágios, múltiplas instruções podem ser executadas simultaneamente, resultando em um melhor aproveitamento dos recursos do processador e uma maior taxa de processamento de instruções. Isso possibilita a execução de várias instruções em paralelo, tornando o processador mais rápido e eficiente.
+Pipeline|Quais são os estágios do pipeline na arquitetura RISC-V e qual é a função de cada estágio?|"Na arquitetura RISC-V, o pipeline é composto por cinco estágios principais. São eles:
+
+•Estágio de busca de instrução (Fetch): Nesse estágio, a próxima instrução a ser executada é buscada na memória de instruções e carregada no pipeline. A função desse estágio é obter as instruções da memória e prepará-las para o próximo estágio.
+
+•Estágio de decodificação de instrução (Decode): Nesse estágio, a instrução buscada anteriormente é decodificada para determinar qual operação deve ser executada e quais registradores serão utilizados. A função desse estágio é extrair informações relevantes da instrução e preparar os operandos para o próximo estágio.
+
+•Estágio de execução (Execute): Nesse estágio, a operação especificada pela instrução é executada. Isso pode envolver cálculos aritméticos, lógicos, acesso à memória, entre outras operações. A função desse estágio é realizar a operação desejada com os operandos fornecidos.
+
+•Estágio de acesso à memória (Memory): Nesse estágio, ocorrem acessos à memória, como leitura ou escrita de dados. Isso pode envolver o acesso a memória principal ou a memórias cache. A função desse estágio é realizar operações de leitura ou escrita de dados na memória.
+
+•Estágio de escrita de resultado (Write Back): Nesse estágio, o resultado da instrução executada é escrito no registrador de destino. A função desse estágio é armazenar o resultado da operação nos registradores adequados.
+
+Cada estágio do pipeline executa uma parte específica do processamento da instrução, permitindo que várias instruções sejam processadas simultaneamente em diferentes estágios. Isso resulta em uma maior eficiência e desempenho do processador."
+Pipeline|Quais são as vantagens do pipeline na arquitetura RISC-V em termos de desempenho e eficiência?|O pipeline na arquitetura RISC-V oferece vantagens significativas em termos de desempenho e eficiência. Ele aumenta o throughput, permitindo que várias instruções sejam processadas em paralelo, melhorando a utilização dos recursos do processador. Isso resulta em um tempo de execução reduzido e um processamento mais rápido de instruções. Além disso, o pipeline oferece flexibilidade e escalabilidade, permitindo ajustes conforme necessário. Em geral, o pipeline na arquitetura RISC-V contribui para um desempenho mais eficiente e um processamento mais rápido de instruções.
+Pipeline|Explique o conceito de hazards (perigos) no pipeline da arquitetura RISC-V e como eles podem ser mitigados.|"No contexto do pipeline na arquitetura RISC-V, hazards (perigos) referem-se a situações em que a correta execução das instruções é impedida ou atrasada devido a dependências de dados, conflitos de recursos ou outras restrições. Os hazards podem levar a atrasos no pipeline e afetar negativamente o desempenho e a eficiência do processador.
+
+Existem diferentes tipos de hazards no pipeline, incluindo hazards de dados, hazards de controle e hazards estruturais. Os hazards de dados ocorrem quando uma instrução depende dos resultados de uma instrução anterior que ainda não foi concluída. Os hazards de controle ocorrem quando a decisão de desvio (branch) é tomada em um estágio posterior, resultando em instruções desnecessárias executadas ou instruções úteis ignoradas. Os hazards estruturais ocorrem quando recursos do hardware são mal utilizados ou compartilhados de forma inadequada.
+
+Existem técnicas para mitigar os hazards no pipeline. Algumas estratégias comuns incluem a utilização de técnicas de forwarding (encaminhamento) para fornecer dados diretamente do estágio de execução para o estágio de busca, evitando a necessidade de buscar dados na memória. Além disso, a detecção e previsão de desvios (branch prediction) são usadas para reduzir os hazards de controle, antecipando a tomada de decisão de desvio e minimizando os atrasos.
+
+Outras técnicas incluem a utilização de buffers para lidar com hazards estruturais e a reordenação de instruções (out-of-order execution) para permitir a execução de instruções independentes em paralelo, mesmo que sua ordem original seja diferente."
+Pipeline|Como a dependência de dados entre instruções pode afetar o desempenho do pipeline na arquitetura RISC-V?|A dependência de dados entre instruções no pipeline da arquitetura RISC-V pode levar a atrasos e diminuição da eficiência. Isso ocorre quando uma instrução depende do resultado de uma instrução anterior para prosseguir, resultando em stalls e subaproveitamento do potencial de execução paralela. Técnicas como encaminhamento e reordenação de instruções são usadas para mitigar esse impacto, permitindo que o resultado seja direcionado diretamente para instruções dependentes e alterando a ordem de execução, desde que a dependência seja preservada. No entanto, dependências complexas e frequentes podem causar atrasos significativos, prejudicando o desempenho do pipeline. Portanto, é importante otimizar o design do software e a organização das instruções para minimizar as dependências de dados.
+Pipeline|Explique o conceito de Adiantamento de Dados em um pipeline RISC-V.|"O adiantamento de dados, também conhecido como forwarding, é uma técnica utilizada no pipeline da arquitetura RISC-V para mitigar os atrasos causados por dependências de dados entre instruções. Essas dependências ocorrem quando uma instrução depende do resultado de uma instrução anterior para prosseguir.
+
+No adiantamento de dados, o resultado de uma instrução é encaminhado diretamente para as instruções subsequentes que precisam desse resultado, evitando a necessidade de esperar que o resultado seja armazenado na memória e recuperado posteriormente. Isso reduz os atrasos e os stalls no pipeline, permitindo que as instruções sejam executadas de forma mais eficiente e sem interrupções.
+
+Existem diferentes tipos de adiantamento de dados, como adiantamento de dados para registradores (forwarding de registradores) e adiantamento de dados para memória (forwarding de memória). O adiantamento de registradores envolve o encaminhamento do resultado diretamente do estágio de execução para o estágio de busca ou decodificação, enquanto o adiantamento de memória permite o encaminhamento do resultado diretamente para as instruções de acesso à memória."
+Hierarquia|Qual a principal razão de se ter o sistema de memória do computador organizado de maneira hierárquica?|"A ideia de se ter uma hierarquia de memória é melhorar a eficiência de acesso a memória da CPU; utilizando-se do conceito de localidade física e temporal, com base nesses princípios, a hierarquia de memória é organizada em diferentes níveis, cada um com diferentes características de velocidade, tamanho e custo. Geralmente, a hierarquia de memória é composta pelos seguintes níveis:
+
+1.Registradores: são os níveis mais próximos do processador, fornecendo o acesso mais rápido à memória. Os registradores são incorporados diretamente no processador e são extremamente rápidos, mas também têm capacidade limitada.
+
+2.Cache: é um nível intermediário entre os registradores e a memória principal. O cache armazena dados e instruções frequentemente utilizados, explorando a localidade de referência. O acesso ao cache é mais rápido do que à memória principal.
+
+3.Memória Principal: também conhecida como RAM (Random Access Memory), é o principal nível de armazenamento de dados do computador. A memória principal é mais lenta em comparação com o cache e os registradores, mas oferece maior capacidade.
+
+4.Memória Secundária: é um nível de armazenamento de dados de longo prazo, como discos rígidos (HDDs) e unidades de estado sólido (SSDs). Embora seja mais lenta em comparação com a memória principal, oferece uma capacidade muito maior."
+Hierarquia|"Uma cache pode ser organizada de tal modo que se tenha: 
+• Mais palavras por bloco, mas poucos blocos 
+• Menos palavras por bloco, mas muitos blocos 
+Considere que nas duas opções a capacidade da cache (em bytes) é a mesma. Quais as vantagens e desvantagens de cada uma das abordagens? Dê um exemplo de sequência de acesso que tem uma taxa de acerto melhor em cada uma das opções."|"A organização da cache com mais palavras por bloco, mas poucos blocos, tem a vantagem de aproveitar melhor a localidade espacial dos dados. Isso significa que se uma palavra é acessada, é mais provável que outras palavras próximas também sejam acessadas em breve. Portanto, ter mais palavras por bloco permite aproveitar esse padrão de acesso e reduzir o número de acessos à memória principal.
+
+Por outro lado, essa abordagem pode ter a desvantagem de ter uma menor taxa de acerto em casos de acesso não localizado. Se uma palavra em um bloco é acessada, mas as palavras subsequentes não são usadas, há um desperdício de espaço na cache, pois mais palavras por bloco foram carregadas do que o necessário.
+
+Já a organização da cache com menos palavras por bloco, mas muitos blocos, tem a vantagem de melhorar a taxa de acerto em casos de acesso não localizado. Como cada bloco contém menos palavras, há uma maior chance de que uma palavra específica esteja presente em um bloco, reduzindo o desperdício de espaço. Isso é particularmente útil em casos de acesso aleatório ou padrões de acesso não localizados.
+
+No entanto, essa abordagem pode ter a desvantagem de exigir mais acessos à memória principal, pois pode ser necessário buscar vários blocos diferentes para obter todas as palavras necessárias. Isso pode aumentar a latência e reduzir o desempenho em comparação com a organização com mais palavras por bloco."
+Hierarquia|"Realize os acessos abaixo na hierarquia de memória, exatamente na ordem em que eles aparecem. Os endereços para acesso estão a Byte. O computador trabalha com palavras de 32 bits (4 Bytes). Suponha que o conteúdo da palavra de memória é o endereço do 1º byte daquela palavra. Há três níveis de cache (L1, L2 e L3) e a memória RAM. A cache L1 é mapeada diretamente e tem 4 blocos. Cada bloco tem 2 palavras. A cache L2 tem 8 conjuntos, é associativa por conjunto com 2 blocos por conjunto e cada bloco tem 2 palavras. A L3 tem 16 blocos e é totalmente associativa. Cada bloco tem 4 palavras. A memória RAM tem 1024 Bytes (não é necessário endereçar mais do que essa quantidade de memória). A política de substituição nas caches L1, L2 e L3 é FIFO. As políticas de atualização são write-back e write allocate para as três caches (use 1 para modificado e 0 para não modificado). Os acessos abaixo podem ser Leitura ou Escrita. Quando o acesso for Escrita, o conteúdo a ser escrito na palavra é o endereço do 1º byte multiplicado por 10. 
+a. Represente graficamente as caches L1, L2, L3 e a memória RAM 
+b. Indique a divisão do endereço da memória principal para cada cache 
+c. Faça a simulação e indique a situação final dos conteúdos na L1, L2 e RAM. 
+d. Indique para cada cache: quantidade de acessos, acertos e faltas.
+São acessadas palavras que começam nos seguintes endereços, já em bytes:
+https://prnt.sc/Gyar1-aFB1sh"|"https://prnt.sc/-EFukmQgV7Xs
+https://prnt.sc/FwAvRrYX-BnU"
+Hierarquia|Para uma cache com 16 words e 1 word por bloco, faça a divisão do endereço nos campos necessários para os mapeamentos direto, associativo e associativo por conjunto (k = 4). Considere que a memória principal é endereçada a Byte e que endereça 2^32 Bytes, portanto, são necessários 32 bits para endereçar qualquer posição da memória. Considere também que uma word (palavra) tem 4 Bytes.|"Mapeamento Direto:
+[Tag: 26 bits | Índice: 4 bits | Offset: 2 bits].
+Mapeamento Associativo:
+ [Tag: 30 bits | Offset: 2 bits].
+Mapeamento Associativo por Conjunto (k = 4):
+[Tag: 28 bits | Índice: 2 bits | Offset: 2 bits].
+
+Lembrando que a soma dos bits em cada campo deve ser igual ao total de bits do endereço, que é 32 bits neste caso."
+Hierarquia|Explique o conceito de hierarquia de memória e como ela contribui para melhorar o desempenho do sistema computacional.|A hierarquia de memória é uma estrutura organizada de diferentes níveis de memória, como cache, memória principal e armazenamento secundário. Ela contribui para melhorar o desempenho do sistema computacional, pois cada nível possui características específicas, como capacidade e velocidade de acesso. Através do princípio da localidade de referência, a hierarquia de memória armazena e prioriza os dados mais frequentemente utilizados em níveis mais rápidos e próximos ao processador, reduzindo o tempo de acesso aos dados e aumentando a eficiência do sistema. Isso permite um acesso mais rápido aos dados frequentemente utilizados, enquanto dados menos utilizados são armazenados em níveis mais lentos, mas com maior capacidade.
+Hierarquia|Qual é a diferença entre cache L1, cache L2 e cache L3? Como eles se relacionam na hierarquia de memória?|"A diferença entre cache L1, cache L2 e cache L3 reside principalmente em sua proximidade com o processador e em suas características de capacidade e velocidade.
+
+A cache L1 é a mais próxima do processador e possui menor capacidade, mas oferece o tempo de acesso mais rápido. Ela armazena os dados e as instruções mais recentemente utilizados pelo processador.
+
+A cache L2 está localizada em um nível intermediário entre a cache L1 e a memória principal. Ela possui maior capacidade que a cache L1 e um tempo de acesso um pouco mais lento.
+
+A cache L3 é a mais distante do processador, localizada fora do núcleo do processador. Ela tem a maior capacidade entre as três caches, mas também o tempo de acesso mais lento.
+
+Essas três caches se relacionam na hierarquia de memória como uma cascata. Quando o processador precisa acessar dados, ele primeiro verifica a cache L1. Se os dados não estiverem presentes na cache L1, ele verifica a cache L2 e, se necessário, a cache L3. Se os dados não estiverem em nenhuma das caches, o processador acessa a memória principal.
+
+Essa hierarquia de memória permite que os dados mais frequentemente utilizados sejam armazenados nas caches mais rápidas e próximas ao processador, reduzindo o tempo de acesso aos dados. Isso melhora o desempenho do sistema, uma vez que o processador pode acessar os dados mais rapidamente na cache em comparação com a memória principal, que possui um tempo de acesso mais lento."
+Hierarquia|Como ocorre o processo de busca de dados na cache? Descreva o funcionamento do cache hit e do cache miss.|"No caso de um cache hit, significa que o dado procurado está presente na cache. Nesse cenário, o processador pode acessar diretamente os dados na cache, evitando assim a necessidade de acessar a memória principal. Isso ocorre devido ao princípio da localidade, que diz que os dados recentemente acessados têm uma alta probabilidade de serem acessados novamente no futuro próximo. Um cache hit é uma operação rápida e eficiente, contribuindo para um bom desempenho do sistema.
+
+Já o cache miss ocorre quando o dado procurado não está presente na cache. Nesse caso, é necessário realizar um acesso à memória principal para buscar o dado solicitado. O dado é então transferido para a cache para ser utilizado pelo processador. Um cache miss resulta em um atraso no tempo de acesso aos dados, uma vez que é necessário buscar o dado na memória principal, que possui um tempo de acesso mais lento do que a cache.
+
+É importante ressaltar que a cache é projetada com algoritmos de substituição para decidir quais dados serão mantidos na cache quando a capacidade estiver cheia."
+Hierarquia|Quais são as possíveis políticas de substituição de blocos na cache? Explique cada uma delas.|"Existem várias políticas de substituição de blocos na cache, cada uma com suas características e trade-offs. Algumas das políticas comuns são:
+
+•LRU (Least Recently Used): Essa política substitui o bloco que foi menos recentemente utilizado. Ela leva em consideração o histórico de uso dos blocos na cache, removendo aquele que foi acessado há mais tempo. A ideia é aproveitar a localidade temporal, ou seja, a tendência de que blocos recentemente acessados sejam acessados novamente no futuro próximo.
+
+•FIFO (First-In, First-Out): Essa política substitui o bloco que foi o primeiro a ser inserido na cache. Funciona como uma fila, em que o bloco mais antigo é removido para dar lugar a um novo bloco. No entanto, a política FIFO não leva em consideração padrões de acesso ou frequência de uso dos blocos.
+
+•LFU (Least Frequently Used): Essa política substitui o bloco que foi menos frequentemente utilizado. Ela conta o número de vezes que cada bloco foi acessado e remove aquele que teve o menor número de acessos. A ideia é dar preferência aos blocos menos usados, considerando que eles têm menos probabilidade de serem acessados novamente no futuro.
+
+•Random (Aleatório): Essa política substitui um bloco de forma aleatória. Nesse caso, não há uma estratégia baseada no histórico de uso ou frequência de acesso. A escolha é puramente aleatória."
+Hierarquia|O que é o princípio de escrita-encaminhamento (write-through) e escrita-apenas-na-cache (write-back) na cache?|"O princípio de escrita-encaminhamento (write-through) e escrita-apenas-na-cache (write-back) são duas abordagens diferentes para tratar as operações de escrita na cache.
+
+No princípio de escrita-encaminhamento (write-through), toda operação de escrita é realizada tanto na cache quanto na memória principal simultaneamente. Isso significa que a cache e a memória principal estão sempre atualizadas com os mesmos dados. Esse princípio garante a consistência dos dados entre a cache e a memória principal, porém pode causar uma sobrecarga de escritas na memória principal, uma vez que cada escrita é duplicada.
+
+Por outro lado, no princípio de escrita-apenas-na-cache (write-back), as operações de escrita são realizadas apenas na cache. Os dados são modificados e mantidos somente na cache, e a atualização na memória principal é adiada. Quando um bloco modificado precisa ser substituído na cache, ele é escrito de volta na memória principal apenas nesse momento. Essa abordagem reduz a quantidade de escritas na memória principal, aproveitando a localidade temporal e reduzindo a sobrecarga de escritas."
+ES|Quais são as principais funções do subsistema de entrada e saída em um sistema de computador?|"O subsistema de entrada e saída desempenha várias funções essenciais em um sistema de computador, incluindo:
+
+•Comunicação com dispositivos periféricos: Ele facilita a interação entre o sistema de computador e os dispositivos de entrada e saída, como teclado, mouse, monitor, impressora, discos rígidos, etc.
+
+•Transferência de dados: O subsistema de E/S é responsável por transferir dados entre os dispositivos periféricos e a memória principal do sistema. Ele garante que os dados sejam lidos corretamente dos dispositivos de entrada e gravados corretamente nos dispositivos de saída.
+
+•Gerenciamento de interrupções: Ele lida com interrupções geradas pelos dispositivos de E/S, permitindo que o sistema responda a eventos externos de maneira oportuna. Isso inclui interrupções de entrada (como pressionar uma tecla) e interrupções de saída (como a conclusão de uma operação de impressão).
+
+•Controle de fluxo: O subsistema de E/S gerencia o fluxo de dados entre os dispositivos periféricos e o sistema de computador. Isso envolve o controle da taxa de transferência de dados e a sincronização das operações de E/S para garantir que os dispositivos estejam prontos para receber ou enviar dados.
+
+•Gerenciamento de buffer: Ele gerencia os buffers de armazenamento temporário usados para acomodar a diferença nas taxas de transferência de dados entre os dispositivos de E/S e a memória principal. Isso ajuda a otimizar a eficiência e o desempenho da transferência de dados.
+
+No geral, o subsistema de entrada e saída desempenha um papel crucial na interação do sistema de computador com o mundo externo, permitindo a entrada de dados, a saída de resultados e a comunicação com dispositivos periféricos."
+ES|Quais são as diferenças entre as técnicas de E/S programada e E/S controlada por interrupção?|"Na E/S programada, o processador é responsável por controlar diretamente as operações de E/S. Ele emite comandos para os dispositivos de E/S, aguarda sua conclusão e então prossegue com outras tarefas. Nesse caso, o processador precisa estar ativamente envolvido em todas as etapas do processo de E/S. A E/S programada é adequada para situações em que as operações de E/S são relativamente rápidas e previsíveis, e o processador pode lidar facilmente com o controle das operações.
+
+Por outro lado, na E/S controlada por interrupção, o processador delega o controle das operações de E/S aos dispositivos periféricos e é notificado através de interrupções quando uma operação é concluída. Os dispositivos periféricos possuem uma lógica interna que controla as operações de E/S de forma independente do processador. Quando uma operação é concluída, o dispositivo periférico gera uma interrupção para notificar o processador, que pode então tomar as medidas apropriadas. Isso permite que o processador execute outras tarefas enquanto aguarda as operações de E/S serem concluídas, resultando em uma melhor utilização do tempo de processamento. A E/S controlada por interrupção é especialmente útil em situações em que as operações de E/S são demoradas ou imprevisíveis, pois permite que o processador execute outras tarefas enquanto aguarda a conclusão das operações de E/S."
+ES|O que é DMA (Acesso Direto à Memória) e como ele melhora o desempenho do subsistema de E/S?|DMA (Acesso Direto à Memória) é uma técnica que melhora o desempenho do subsistema de E/S em um sistema de computador. Com o DMA, um controlador dedicado assume o controle da transferência de dados entre a memória principal e os dispositivos periféricos, sem a intervenção direta do processador. Isso libera o processador para executar outras tarefas enquanto as transferências ocorrem em segundo plano, melhorando o desempenho geral do sistema. O DMA também suporta modos de transferência eficientes, como transferência em bloco e transferência direta de memória para memória.
+ES|"A técnica de E/S programada requer a intervenção direta do processador em todas as operações de E/S.
+
+a)Verdadeiro
+b)Falso"|[a] Verdadeiro.
+ES|"A E/S controlada por interrupção permite que o processador execute outras tarefas enquanto aguarda a conclusão de uma operação de E/S.
+
+a)Verdadeiro
+b)Falso"|[a] Verdadeiro.
+ES|"A E/S mapeada em memória é uma técnica em que os registradores dos dispositivos periféricos são mapeados para endereços de memória específicos.
+
+a)Verdadeiro
+b)Falso"|[a] Verdadeiro.
+ES|"O subsistema de E/S é responsável apenas pela comunicação entre o processador e os dispositivos periféricos.
+
+a)Verdadeiro
+b)Falso"|[b]Falso.
+Barramento|"O barramento é um componente responsável por interligar os diferentes dispositivos de um sistema de computador.
+
+a)Verdadeiro
+b)Falso"|[a]Verdadeiro
+Barramento|"O barramento é um componente exclusivo dos computadores pessoais e não é utilizado em outros tipos de dispositivos eletrônicos.
+
+a)Verdadeiro
+b)Falso"|[b]Falso
+Barramento|"O barramento é um componente de hardware que não possui impacto no desempenho geral de um sistema de computador.
+
+a)Verdadeiro
+b)Falso"|[b]Falso
+Barramento|"A largura do barramento é um fator determinante para a velocidade de transferência de dados entre os dispositivos.
+
+a)Verdadeiro
+b)Falso"|[a]Verdadeiro
+Barramento|Explique o conceito de barramento em um sistema de computador e sua função principal.|Em um sistema de computador, o barramento é um canal de comunicação que permite a transferência de informações e sinais entre os diferentes componentes do sistema. Ele consiste em um conjunto de fios condutores que conectam a CPU, a memória, os dispositivos de entrada e saída, e outros componentes do sistema. A função principal do barramento é permitir a troca de dados, endereços e sinais de controle entre os dispositivos, garantindo a comunicação e coordenação adequadas entre eles. O barramento é responsável por facilitar a transferência de dados entre a memória e a CPU, bem como a comunicação entre a CPU e os dispositivos periféricos, permitindo que o sistema funcione de forma integrada e execute suas tarefas de maneira eficiente. Em resumo, o barramento desempenha um papel crucial na interconexão dos componentes do sistema, possibilitando a troca de informações e garantindo o funcionamento adequado do sistema de computador como um todo.
+Barramento|Quais são os principais tipos de barramento encontrados em um sistema de computador e qual a função de cada um?|"•Barramento de Dados: O barramento de dados é responsável pela transferência de dados entre a CPU, a memória e os dispositivos de entrada e saída. Ele carrega os bits que representam as informações sendo processadas, permitindo a leitura e gravação de dados nos endereços de memória corretos. O barramento de dados é bidirecional, o que significa que pode transmitir dados tanto da CPU para a memória/dispositivos quanto na direção oposta.
+
+•Barramento de Endereço: O barramento de endereço é utilizado para identificar a localização de memória ou dispositivos específicos no sistema. A CPU envia sinais de endereço através desse barramento para indicar onde os dados devem ser lidos ou gravados. O barramento de endereço é unidirecional, pois as informações fluem apenas da CPU para a memória/dispositivos.
+
+•Barramento de Controle: O barramento de controle é responsável por transmitir os sinais de controle necessários para coordenar as operações entre a CPU, a memória e os dispositivos periféricos. Ele inclui sinais de sincronização, sinais de interrupção, sinais de leitura/escrita e outros sinais de controle relevantes. O barramento de controle garante que todas as partes do sistema estejam em sincronia e operem corretamente."
+Barramento|Como a largura do barramento afeta a velocidade de transferência de dados entre os dispositivos? Explique o conceito de largura de barramento e sua relação com a capacidade de transferência.|"A largura do barramento refere-se ao número de bits que podem ser transmitidos simultaneamente entre os dispositivos em um sistema de computador. Ela desempenha um papel crucial na velocidade de transferência de dados entre os dispositivos, uma vez que determina a quantidade de dados que pode ser transmitida em cada ciclo de clock.
+
+Quanto maior a largura do barramento, maior será a capacidade de transferência de dados. Isso ocorre porque uma maior quantidade de bits pode ser transmitida em paralelo, reduzindo o tempo necessário para transmitir um determinado volume de dados.
+
+Por exemplo, se um sistema possui um barramento de 8 bits, ele pode transmitir 8 bits de dados a cada ciclo de clock. Isso resulta em uma capacidade de transferência mais baixa em comparação com um sistema com um barramento de 16 bits, que pode transmitir o dobro de bits por ciclo de clock.
+
+Portanto, a largura do barramento afeta diretamente a velocidade de transferência de dados entre os dispositivos. Um barramento mais amplo permite uma transferência de dados mais rápida, enquanto um barramento mais estreito limita a taxa de transferência. No entanto, é importante notar que outros fatores, como a velocidade do clock e a eficiência do protocolo de comunicação, também podem influenciar a velocidade geral da transferência de dados."
+Barramento|Discuta a importância da sincronização no barramento e como ela é realizada para garantir a correta transmissão e recepção dos dados entre os dispositivos.|A sincronização no barramento é crucial para garantir a correta transmissão e recepção dos dados entre os dispositivos. Ela é realizada por meio de sinais de clock que coordenam o fluxo de dados. Os dispositivos enviam e recebem dados em momentos específicos durante o ciclo de clock, garantindo a sincronização adequada. Além do sinal de clock, os dispositivos devem estar alinhados com os protocolos de comunicação, seguindo especificações precisas de formato e ordem de transmissão dos dados. Isso assegura uma comunicação confiável e sem erros.
