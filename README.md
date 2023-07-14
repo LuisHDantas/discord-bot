@@ -37,3 +37,6 @@ A bot for the course SSC0902's (computer architecture and organization) discord 
 
 2. In the open tab, select the server to add.
 
+# change Discord Token
+
+1. On main.py, make sure to set "DISCORD_TOKEN" to your developer token, otherwise an error will occur ("Invalid Token").
