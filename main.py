@@ -14,7 +14,6 @@ DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
-#bot = discord.Client(intents=intents)
 
 bot = commands.Bot(command_prefix=">>", intents=intents)
 
@@ -47,25 +46,7 @@ topics = [
 async def on_ready():
     print("Bot is online!")
     
-# async def on_message(message):
-	
-# 	if message.content.startswith(">>"):
-# 		#getting command from user
-# 		command = message.content.lstrip(">>")
-  
-# 		if command == "perguntas":
-# 			#prints the topics of study for the user to choose
-# 			await Questions.TopicsMenu(message)
-# 			return
-   
-# 		answer = dic.get(command)
-# 		if answer is not None:
-# 			await message.channel.send(answer)
 
-# 		#if on the topics menu
-# 		elif onTopicsMenu():
-# 			Questions.TopicChoice(message, dic)
-      
 @bot.command(
     aliases = ['questions','exercicios'],
 	help = "Example:\n >>perguntas",
