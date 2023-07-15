@@ -12,7 +12,6 @@ with open('config.json') as config_file:
     config = json.load(config_file)
 
 DISCORD_TOKEN = config['DISCORD_TOKEN']
-#os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
