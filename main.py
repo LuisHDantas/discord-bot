@@ -4,10 +4,15 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 import asyncio
+import json
 
 load_dotenv()
 
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+with open('config.json') as config_file:
+    config = json.load(config_file)
+
+DISCORD_TOKEN = config['DISCORD_TOKEN']
+#os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
