@@ -1,6 +1,8 @@
 # discord-bot
 A bot for the course SSC0902's (computer architecture and organization) discord server, that answers the most common questions for the students, as well as supporting their study with exercises about every topic in the course.
 
+Developed in association with Eduarda Neumann and João Gabriel Nazar
+
 ## instalation
 
 1. Clone the repository:
@@ -37,3 +39,6 @@ A bot for the course SSC0902's (computer architecture and organization) discord 
 
 2. In the open tab, select the server to add.
 
+# change Discord Token
+
+1. On main.py, make sure to set "DISCORD_TOKEN" to your developer token, otherwise an error will occur ("Invalid Token").
