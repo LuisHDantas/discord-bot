@@ -7,8 +7,7 @@ import asyncio
 
 load_dotenv()
 
-DISCORD_TOKEN = "NDkxNDA0NzkyNzc4NzE5MjQy.GjZsEd.psShDqc8209zVQiaGBZJlsamGt4ZBj9iiRz4yY"
-#os.getenv("DISCORD_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
