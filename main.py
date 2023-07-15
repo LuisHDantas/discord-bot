@@ -4,19 +4,18 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 import asyncio
-import csv
 
- 
- 
 load_dotenv()
 
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+DISCORD_TOKEN = "NDkxNDA0NzkyNzc4NzE5MjQy.GjZsEd.psShDqc8209zVQiaGBZJlsamGt4ZBj9iiRz4yY"
+#os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix=">>", intents=intents)
 
+#leitura dos dados
 df = pd.read_csv('in.csv', sep='|')
 
 dataBase = [(topics, question, answers) for topics, question, answers in zip(df.topics, df.questions, df.answers)]
@@ -72,7 +71,7 @@ Use >>cancelar para sair!""",
 	)
 	embed.set_footer(text="Organização e Arquitetura de Computadores\nCriado por Eduarda Neumann, Luís Henrique Dantas, João Gabriel Nazar")
 	await message.send(embed=embed)
-	#await Questions.TopicsMenu(message)
+	
 	def check(m):
 		if m.content == ">>cancelar":
 			return True
