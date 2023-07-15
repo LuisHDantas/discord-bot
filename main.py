@@ -115,7 +115,7 @@ Use >>cancelar para sair!""",
 				description = f"{question}\n\n *Gabarito:*\n ||```{answer}```||",
 				title = f"__**Questão {i+1}**__"
 			)
-			await message.send(embed=embed)
+			await message.author.send(embed=embed)
       
 
 		await message.author.send("""## \n\nTem dúvidas? Entre em contato com um monitor ou com a professora Sarita!\n
