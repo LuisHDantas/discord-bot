@@ -9,7 +9,7 @@ Developed in association with Eduarda Neumann and João Gabriel Nazar
 
     `git clone https://github.com/LuisHDantas/discord-bot.git`
 
-2. Enter the sirectory:
+2. Enter the directory:
 
     `cd discord-bot`
 
